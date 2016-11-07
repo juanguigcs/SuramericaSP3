@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Suramérica sin Pasaporte</string>
+    <string name="sbface">Entrar con Facebook</string>
+    <string name="sbncuenta"><u>Crear una cuenta</u></string>
+    <string name="sblogin">login</string>
+    <string name="Usuario">Ingrese Usuario</string>
+    <string name="Comtrasena">Ingrese Contraseña</string>
+    <string name="Entrar">Entrar</string>
+    <string name="Resgistro">Resgistro</string>
+    <string name="Correo">Correo xx@xx</string>
+    <string name="Aceptar">Aceptar</string>
+    <string name="Cancelar">Cancelar</string>
+    <string name="abierto">Open navigation drawer</string>
+    <string name="cerrado">Close navigation drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

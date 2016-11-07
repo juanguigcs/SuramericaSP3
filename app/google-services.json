@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "586063523826",
+    "firebase_url": "https://suramericasp3.firebaseio.com",
+    "project_id": "suramericasp3",
+    "storage_bucket": "suramericasp3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:586063523826:android:e18a7f97a37efbb6",
+        "android_client_info": {
+          "package_name": "cualmemo.suramericasp3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "586063523826-njqsq20bl2145379cnc95g32f1m2o1ri.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cualmemo.suramericasp3",
+            "certificate_hash": "204F4D434ED02B3E1F8BA6E3C0C02FDAE1BA8107"
+          }
+        },
+        {
+          "client_id": "586063523826-p4hd9k3li4qhpduilb7224pmj6220ijk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOfqv-iewgodcTDRKKKEAWKuDOPikdBvg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "586063523826-p4hd9k3li4qhpduilb7224pmj6220ijk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
