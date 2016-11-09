@@ -89,9 +89,9 @@ public class MainActivity extends AppCompatActivity {
                         finish();
                         break;
                     case (5):
-                        Intent intent4 = new Intent(getApplicationContext(), InicioActivity.class);
+                        Intent intent4 = new Intent(getApplicationContext(), MapsActivity.class);
                         startActivity(intent4);
-                        finish();
+                        //finish();
                         break;
                 }
 
