@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -15,6 +16,8 @@ import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import static com.facebook.FacebookSdk.getApplicationContext;
 
 
 /**
@@ -46,6 +49,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         map = googleMap;
+        //Toast.makeText(getApplicationContext(),"ESSSSTOY ACA ", Toast.LENGTH_SHORT).show();
 
         final LatLng casa = new LatLng(6.2109713, -75.6029396);
         map.addMarker(new MarkerOptions().position(casa).title("Marker in casa"));

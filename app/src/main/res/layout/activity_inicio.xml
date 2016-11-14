@@ -54,16 +54,14 @@
         android:layout_weight="0.435"
         android:orientation="vertical">
 
-        <Button
-            android:layout_width="350dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="70dp"
-            android:drawableLeft="@drawable/facebook"
-            android:textColorHint="@color/white"
-            android:background="@color/mediumblue"
-            android:hint="@string/sbface"
-            android:textSize="20dp"
-            android:id="@+id/bFace"/>
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp" />
+
 
         <Button
             android:layout_width="350dp"

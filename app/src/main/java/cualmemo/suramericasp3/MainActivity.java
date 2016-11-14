@@ -1,18 +1,34 @@
 package cualmemo.suramericasp3;
 
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Base64;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
+
+import com.facebook.AccessToken;
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
+import com.facebook.login.LoginManager;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class MainActivity extends AppCompatActivity {
     String[] nombrerutas = new String[]{"Medellín-Machu Picchu", "mapa 2", "mapa 3", "mapa 4"};
@@ -31,7 +47,24 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        AppEventsLogger.activateApp(this);
         setContentView(R.layout.activity_main);
+
+        /*if(AccessToken.getCurrentAccessToken()==null){
+            goInicioActivity();
+        }*/
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        if(user!=null){
+            Toast.makeText(getApplicationContext(),user.getDisplayName()+","+user.getEmail()+","+user.getUid(), Toast.LENGTH_SHORT).show();
+        }
+        else{
+            goInicioActivity();
+        }
+
+
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, nombrerutas);
         Lst = (ListView) findViewById(R.id.lst);
@@ -76,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
                         // Toast.makeText(getApplicationContext(),"Opcion "+String.valueOf(i), Toast.LENGTH_SHORT).show();
                         break;
                     case (3):
-                        Intent intent3 = new Intent(getApplicationContext(), PerfilActivity.class);
+                        Intent intent3 = new Intent(getApplicationContext(), MapsActivity.class);
                         startActivity(intent3);
                         //editor.clear();
                         //editor.remove("v_ingreso");
@@ -89,8 +122,7 @@ public class MainActivity extends AppCompatActivity {
                         finish();
                         break;
                     case (5):
-                        Intent intent4 = new Intent(getApplicationContext(), MapsActivity.class);
-                        startActivity(intent4);
+                        logout(view);
                         //finish();
                         break;
                 }
@@ -105,7 +137,16 @@ public class MainActivity extends AppCompatActivity {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         // client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
-
+    private void goInicioActivity(){
+        Intent intent= new Intent(getApplicationContext(),InicioActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP| Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+    private void logout(View view){
+        LoginManager.getInstance().logOut();
+        FirebaseAuth.getInstance().signOut();
+        goInicioActivity();
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

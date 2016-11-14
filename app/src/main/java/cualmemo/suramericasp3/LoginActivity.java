@@ -6,12 +6,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
+
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button blAceptar,blCancelar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_login);
         blAceptar =(Button)findViewById(R.id.blAceptar);
         blCancelar=(Button)findViewById(R.id.blCancelar);
