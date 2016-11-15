@@ -11,103 +11,113 @@
     tools:context="cualmemo.suramericasp3.RegistroActivity"
     android:orientation="vertical"
     android:background="@drawable/degradado1">
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.6"
+        android:layout_height="0dp"
+        android:layout_weight="0.45"
         android:orientation="vertical"
         >
-
         <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:src="@drawable/imglogo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/imgapp"
             android:layout_gravity="center"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.08">
+        android:layout_height="0dp"
+        android:layout_weight="0.55"
+        android:orientation="vertical">
 
-        <EditText
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/erUsuario"
-            android:hint="@string/Usuario"
-            android:gravity="center"
-            android:inputType="textEmailSubject"
-            android:textColorHint="@color/black" />
-    </LinearLayout>
+            android:layout_weight="0.08">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.08">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/erUsuario"
+                android:hint="@string/Usuario"
+                android:gravity="center"
+                android:inputType="textEmailSubject"
+                android:textColorHint="@color/black" />
+        </LinearLayout>
 
-        <EditText
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:id="@+id/erContrasena"
-            android:hint="@string/Comtrasena"
-            android:gravity="center"
-            android:textColorHint="@color/black" />
-    </LinearLayout>
+            android:layout_weight="0.08">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.08">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:id="@+id/erContrasena"
+                android:hint="@string/Comtrasena"
+                android:gravity="center"
+                android:textColorHint="@color/black" />
+        </LinearLayout>
 
-        <EditText
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:id="@+id/erRContrasena"
-            android:hint="@string/Comtrasena"
-            android:gravity="center"
-            android:textColorHint="@color/black" />
-    </LinearLayout>
+            android:layout_weight="0.08">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.08">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:id="@+id/erRContrasena"
+                android:hint="@string/Comtrasena"
+                android:gravity="center"
+                android:textColorHint="@color/black" />
+        </LinearLayout>
 
-        <EditText
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textWebEmailAddress"
-            android:id="@+id/erCorreo"
-            android:hint="@string/Correo"
-            android:gravity="center"
-            android:textColorHint="@color/black" />
-    </LinearLayout>
+            android:layout_weight="0.08">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.08">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textWebEmailAddress"
+                android:id="@+id/erCorreo"
+                android:hint="@string/Correo"
+                android:gravity="center"
+                android:textColorHint="@color/black" />
+        </LinearLayout>
 
-        <Button
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/brAceptar"
-            android:text="@string/Aceptar"
-            android:elegantTextHeight="false" />
-    </LinearLayout>
+            android:layout_weight="0.08">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.08">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/brAceptar"
+                android:text="@string/Aceptar"
+                android:elegantTextHeight="false" />
+        </LinearLayout>
 
-        <Button
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/brCancelar"
-            android:text="@string/Cancelar" />
+            android:layout_weight="0.08">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/brCancelar"
+                android:text="@string/Cancelar" />
+        </LinearLayout>
+
     </LinearLayout>
+
 
 </LinearLayout>
